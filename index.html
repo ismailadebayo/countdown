@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to our Launch </title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+        
+    <div class="container">
+        <div class="second-container">
+            <div class="nav">
+                <img src="./images/logo.png" class="logo" alt="logo">
+            </div>
+            <div class="hero-text">
+                <p>Coming soon</p>
+                <h1>Experience <span>awesome</span> launch</h1>
+                
+            </div>
+            <div class="count-container">
+                <div class="space">
+                    <p  id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div id="space">
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div class="space">
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div id="minutes space">
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+
+            <div class="btn">
+                <button >Learn more <img src="./images/triangle.png" class="arrow"  alt=""> </button>
+                
+            </div>
+        </div>
+        <img src="./images/rocket.png" alt="rocket" class="rocket" srcset="">
+        </div>
+       
+        
+
+    <script>
+        const countDownStop = new Date('December 25, 2024 00:00:00').getTime();
+        const x= setInterval(function(){
+            let now = new Date().getTime();
+            let distance = countDownStop - now;
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+           
+        
+            document.getElementById('days').textContent = days
+            document.getElementById('hours').textContent = hours
+            document.getElementById('minutes').textContent = minutes
+            document.getElementById('seconds').textContent = seconds
+
+            if(distance<0){
+                clearInterval(x)
+            document.getElementById('days').textContent = "00"
+            document.getElementById('hours').textContent = "00"
+            document.getElementById('minutes').textContent = "00"
+            document.getElementById('seconds').textContent = "00"
+            }
+            
+
+        }, 1000);
+    </script>
+</body>
+</html>

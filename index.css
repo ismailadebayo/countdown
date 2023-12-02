@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+}
+.hero-text{
+ padding-top: 70px;
+}
+.hero-text span{
+    color: red;
+   }
+.hero-text h1{
+    font-size: 50px;
+    color: white;
+}
+.hero-text p{
+    color: white;
+    font-size: 25px;
+    margin-top: -10px;
+}
+.container{
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    width: 100vw;
+    height: 100vh;
+}
+.second-container{
+    padding: 20px 100px;
+}
+ button{
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 12px 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+    
+}
+.btn .arrow{
+    width: 25px;
+    margin-left: 10px;
+    
+}
+.logo{
+    width: 150px;
+}
+.nav{
+    padding-top: 10px;
+}
+.count-container{
+    display: flex;
+    color: white;
+}
+.count-container p{
+    font-size: 35px;
+    font-style: italic;
+    margin-left: 5px;
+    
+}
+.count-container span{
+    font-size: 15px;
+    margin-left: 5px;
+    
+}
+.rocket{
+    position: absolute;
+    right: 40px;
+    bottom: 0px;
+    width:200px;
+    animation: rocket 4s linear infinite;
+}
+
+@keyframes rocket{
+    0%{
+        bottom: 0;
+        opacity: 0
+    }
+    100%{
+        bottom: 105%;
+        opacity: 1
+    }
+}
